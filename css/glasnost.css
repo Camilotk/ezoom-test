@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Russian;
+    src: url("fonts/Kyrilla.ttf");
+}
+
+@font-face {
+    font-family: Lato;
+    src: url("fonts/Lato-Regular.woff");
+}
+
+.navbar {
+    background-color: white;
+    position: relative;
+}
+
+.title {
+    font-family: Russian;
+    color: black;
+    font-size: 35px;
+    padding: 0px;
+    text-decoration: none;
+    position: relative;
+}
+
+.subtitle {
+    font-family: Lato;
+    color: darkgray;
+    font-size: 15px;
+    padding: 0%;
+    position: relative;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: -120px;
+    width: 150%;
+    height: 150%;
+}
