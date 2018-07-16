@@ -7,7 +7,10 @@ Para meu CRUD decidi fazer um  Sistema de Cursos de Inovação baseado no case d
 Então! Antes deste teste eu não sabia absolutamente nada de PHP, precisei aprender fazendo. Mas como não gosto de atirar no escuro fiz dois tutoriais de 12H cada de introdução básica à linguagem e ao framework que estão [neste](https://github.com/Camilotk/primeiro_php) e [neste](https://github.com/Camilotk/codeigniter_estudo) repositório. Ambos também são CRUD's, porém fiz seguindo tutoriais e por tanto são objetos de estudo e não código pessoal.
 
 # PREVIEW
-Talvez seja interessante baixar através do GIT CLONE ou da função de compreensão e rodar no localhost. Aparentemente os base_url não atualizam as rotas após hospedar e mantem os caminhos locais.
+
+https://glasnost.000webhostapp.com/
+
+O Webhosting marcou como fishing, mas tá ok. Talvez possam haver erros de redirecionamentos causados pelas configurações do servidor (o site pede para marcar todos os redirecionamentos em um painel, contas free tem 10). Caso haja erros graves, tentar rodar local. 
 
 # VERSÕES
  - PHP 7.2
