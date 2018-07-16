@@ -28,6 +28,8 @@ CREATE TABLE estudante (
     data_nascimento date,
     sexo enum('M', 'F'),
     id_endereco integer,
+    email varchar(100),
+    senha varchar(255),
     FOREIGN KEY (id_endereco) REFERENCES endereco(id_endereco)
 ) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
@@ -39,6 +41,8 @@ CREATE TABLE funcionario (
     data_nascimento date,
     sexo enum('M', 'F'),
     id_endereco integer,
+    email varchar(100),
+    senha varchar(255),
     FOREIGN KEY (id_endereco) REFERENCES endereco(id_endereco)
 ) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
@@ -47,18 +51,6 @@ CREATE TABLE curso (
     nome varchar(150),
     descricao text,
     horas integer
-) CHARACTER SET utf8 COLLATE utf8_general_ci;
-
-CREATE TABLE turma (
-    id_turma integer AUTO_INCREMENT PRIMARY KEY NOT null,
-    ano varchar(4),
-    nota float,
-    id_curso integer,
-    id_professor integer,
-    id_aluno integer,
-    FOREIGN KEY (id_curso) REFERENCES curso(id_curso),
-    FOREIGN KEY (id_professor) REFERENCES funcionario(matricula),
-    FOREIGN KEY (id_aluno) REFERENCES estudante(matricula)
 ) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE escola (
@@ -86,7 +78,3 @@ CREATE TABLE vinculo (
     FOREIGN KEY (cod_funcionario) REFERENCES funcionario(matricula),
     FOREIGN KEY (cod_departamento) REFERENCES departamento(cod_departamento)
 ) CHARACTER SET utf8 COLLATE utf8_general_ci;
-
--- esqueci de por email e senha
-ALTER TABLE `estudante`  ADD `email` VARCHAR(100) NOT NULL  AFTER `id_endereco`,  ADD `senha` VARCHAR(255) NOT NULL  AFTER `email`;
-ALTER TABLE `funcionario`  ADD `email` VARCHAR(100) NOT NULL  AFTER `id_endereco`,  ADD `senha` VARCHAR(255) NOT NULL  AFTER `email`;

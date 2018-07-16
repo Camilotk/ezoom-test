@@ -41,7 +41,7 @@ class Login extends CI_Controller {
 
         $this->usuario_banco->cadastraEndereco($endereco);
         $this->usuario_banco->cadastraUsuario($usuario);
-        $this->load->view("teste");
+        redirect("/");
     }
 
     public function logar() {

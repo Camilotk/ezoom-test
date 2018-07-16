@@ -8,7 +8,7 @@ class Usuario_banco extends CI_Model {
     public function rtrIndiceEndereco ($rua_bairro) {
         $this->db->where($rua_bairro);
         $resultado = $this->db->get("endereco")->row_array();
-        return $resultado["id_endereco\\"];
+        return $resultado["id_endereco"];
     }
 
     public function cadastraUsuario ($usuario) {

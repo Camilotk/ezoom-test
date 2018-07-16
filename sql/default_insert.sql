@@ -18,13 +18,13 @@ VALUES
 -- ------------------------------------------------------------
 INSERT INTO 
 	estudante 
-VALUES(555062, 'Dwayne', 'Johnson', '987641253', '1973-09-08', 'M', 2);
+VALUES(555062, 'Dwayne', 'Johnson', '987641253', '1973-09-08', 'M', 2, "t.rock@gmail.com", "827ccb0eea8a706c4c34a16891f84e7b");
 INSERT INTO 
 	estudante 
-VALUES(333666, 'Luka', 'Modric', '654189327', '1987-02-11', 'M', 1);
+VALUES(333666, 'Luka', 'Modric', '654189327', '1987-02-11', 'M', 1, 'modric@croacia.com', '0c82bb46208f6e8f8141f83d738402e5');
 -- -------------------------------------------------------------
-INSERT INTO funcionario VALUES(856321, 'Elon', 'Musk', '987455221', '1988-06-04', 'M', 2);
-INSERT INTO funcionario VALUES(745852, 'Dennis', 'Ritchie', '896256147', '1950-12-05', 'M', 1);
+INSERT INTO funcionario VALUES(856321, 'Elon', 'Musk', '987455221', '1988-06-04', 'M', 2, 'elon.musk@tesla.com', 'bc250e0d83c37b0953ada14e7bbc1dfd');
+INSERT INTO funcionario VALUES(745852, 'Dennis', 'Ritchie', '896256147', '1950-12-05', 'M', 1, "write.in@belllabs.com", "01cfcd4f6b8770febfb40cb906715822");
 -- -------------------------------------------------------------
 INSERT INTO 
     curso (nome, descricao, horas) 

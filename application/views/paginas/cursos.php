@@ -10,13 +10,11 @@
 <?PHP foreach ($cursos as $curso) : ?>
     <tr>
         <td><?=$curso["nome"]?></td>
-        <td><?=$curso["descricao"]?></td>
+        <td><?= substr($curso["descricao"], 0, 70)?></td>
         <td><?=$curso["horas"]?></td>
-        <td><?=anchor("curso/deleta", "deleta", array("class" => "btn btn-danger"))?></td>
-        <td><?=anchor("curso/altera", "altera", array("class" => "btn btn-primary"))?></td>
+        <td><a href="<?=base_url("")?>index.php/curso/deleta?id=<?=$curso["id_curso"]?>" class="btn btn-danger">deleta</td>
+        <td><a href="<?=base_url("")?>index.php/curso/altera?id=<?=$curso["id_curso"]?>" class="btn btn-primary">altera</td>
     </tr>
 <?PHP endforeach ?>
-</table>
-<?=anchor("curso/novo", "Cadastrar um novo curso", array("class" => "btn btn-default"))?>
-<br>
+
 </table>

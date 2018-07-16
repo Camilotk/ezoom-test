@@ -7,7 +7,7 @@
     <title>Glasnost - Escola de Atividades Criativas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="<?=base_url("css/glasnost.css")?>" />
+    <link rel="stylesheet" type="text/css" media="screen" href="http://localhost/ezoom-test/css/glasnost.css" />
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -37,10 +37,10 @@
                     <a href="<?=site_url('curso/lista')?>">Cursos</a>
                 </li>
                 <li>
-                    <a href="#">Cadastrar Professor</a>
+                    <a href="<?=site_url('professor/cadastra')?>">Cadastrar Professor</a>
                 </li>
                 <li>
-                    <a href="#">Meu Perfil</a>
+                    <a href="<?=site_url('curso/formulario_cadastra')?>">Cadastrar Curso</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
