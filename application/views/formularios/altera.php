@@ -25,11 +25,11 @@ echo form_input(array(
         <?PHP foreach ($professores as $professor) : 
             if ($professor["matricula"] == $curso["id_professor"]) {
     ?>
-        <option selected="selected" value="<?=$professor[" matricula "]?>">
+        <option selected="selected" value="<?=$professor["matricula"]?>">
             <?=$professor["nome"] . " " . $professor["sobrenome"]?>
         </option>
         <?PHP } else { ?>
-        <option value="<?=$professor[" matricula "]?>">
+        <option value="<?=$professor["matricula"]?>">
             <?=$professor["nome"] . " " . $professor["sobrenome"]?>
         </option>
         <?PHP } ?>
