@@ -34,10 +34,10 @@
             <?PHP if($this->session->userdata("usuario_logado")) : ?>
             <ul class="nav navbar-nav rounded-0">
                 <li class="active">
-                    <a href="#">Home</a>
+                    <a href="<?=site_url('curso/lista')?>">Cursos</a>
                 </li>
                 <li>
-                    <a href="#">Cursos</a>
+                    <a href="#">Cadastrar Professor</a>
                 </li>
                 <li>
                     <a href="#">Meu Perfil</a>

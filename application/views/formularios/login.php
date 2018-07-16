@@ -20,7 +20,7 @@ echo "<br>";
 
 echo form_button(array(
     "class" => "btn btn-primary",
-    "content" => "Cadastrar",
+    "content" => "Login",
     "type" => "submit"
 ));
 echo form_close();

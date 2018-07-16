@@ -58,7 +58,7 @@ class Login extends CI_Controller {
         } else {
             $this->session->set_flashdata("danger", "Falha no login");
         }
-        $this->load->view("teste");
+        redirect("/");
     }
 
     public function logout() {
