@@ -11,8 +11,12 @@ class Usuario_banco extends CI_Model {
         return $resultado["id_endereco"];
     }
 
-    public function cadastraUsuario ($usuario) {
+    public function cadastraEstudante ($usuario) {
         $this->db->insert("estudante", $usuario);
+    }
+
+    public function cadastraProfessor ($usuario) {
+        $this->db->insert("funcionario", $usuario);
     }
 
     public function buscaUsuario ($email, $senha) {
@@ -21,4 +25,13 @@ class Usuario_banco extends CI_Model {
         $usuario = $this->db->get("estudante")->row_array();
         return $usuario;
     }
+
+    public function buscaTodosProfessores(){
+        $this->db->select("nome");
+        $this->db->select("sobrenome");
+        $this->db->select("matricula");
+        return $this->db->get("funcionario")->result_array();
+    }
+
+
 }

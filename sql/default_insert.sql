@@ -2,7 +2,7 @@
 
 -- -------------------------------------------------
 INSERT INTO estado VALUES('rs', 'Rio Grande do Sul');
-INSERT INTO tabela VALUES('sp', 'São Paulo');
+INSERT INTO estado VALUES('sp', 'São Paulo');
 -- --------------------------------------------------------
 INSERT INTO cidade (nome, uf) VALUES('Caxias do Sul', 'rs');
 INSERT INTO cidade (nome, uf) VALUES('São Paulo', 'sp');
@@ -27,16 +27,13 @@ INSERT INTO funcionario VALUES(856321, 'Elon', 'Musk', '987455221', '1988-06-04'
 INSERT INTO funcionario VALUES(745852, 'Dennis', 'Ritchie', '896256147', '1950-12-05', 'M', 1, "write.in@belllabs.com", "01cfcd4f6b8770febfb40cb906715822");
 -- -------------------------------------------------------------
 INSERT INTO 
-    curso (nome, descricao, horas) 
+    curso (nome, descricao, horas, id_professor) 
 VALUES
-    ('Arte com Circuitos Integrados', 'Ensina como criar circuitos artísticos', 89);
+    ('Arte com Circuitos Integrados', 'Ensina como criar circuitos artísticos', 89, 745852);
 INSERT INTO 
-    curso (nome, descricao, horas) 
+    curso (nome, descricao, horas, id_professor) 
 VALUES
-    ('Criatividade e Arte de Rua', 'Ensina como a arte urbana pode mudar o mundo', 12);
--- --------------------------------------------------------------
-INSERT INTO turma (ano, nota, id_curso, id_professor, id_aluno) VALUES('2019', 0, 1, 856321, 333666);
-INSERT INTO turma (ano, nota, id_curso, id_professor, id_aluno) VALUES('2016', 9.5, 2, 745852, 555062);
+    ('Criatividade e Arte de Rua', 'Ensina como a arte urbana pode mudar o mundo', 12, 856321);
 -- ---------------------------------------------------------------
 INSERT INTO escola (cod_cidade) VALUES(1);
 INSERT INTO escola (cod_cidade) VALUES(2);

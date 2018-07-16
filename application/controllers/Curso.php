@@ -20,8 +20,10 @@ class Curso extends CI_Controller {
 
     public function formulario_cadastra(){
         $this->load->helper("form");
+        $this->load->model("usuario_banco");
+        $professores = $this->usuario_banco->buscaTodosProfessores();
         $this->load->view("headers/cabecalho");
-        $this->load->view("formularios/curso");
+        $this->load->view("formularios/curso", array("professores" => $professores));
         $this->load->view("headers/rodape");
     }
 
@@ -29,7 +31,8 @@ class Curso extends CI_Controller {
         $curso = array(
             "nome" => $this->input->post("nome"),
             "horas" => $this->input->post("horas"),
-            "descricao" => $this->input->post("descricao")
+            "descricao" => $this->input->post("descricao"),
+            "id_professor" => $this->input->post("professores")
         );
         $this->load->model("curso_banco");
         $this->curso_banco->insereCurso($curso);

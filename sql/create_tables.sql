@@ -50,7 +50,9 @@ CREATE TABLE curso (
     id_curso integer AUTO_INCREMENT PRIMARY KEY NOT null,
     nome varchar(150),
     descricao text,
-    horas integer
+    horas integer,
+    id_professor integer,
+    FOREIGN KEY (id_professor) REFERENCES funcionario(matricula)
 ) CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 CREATE TABLE escola (

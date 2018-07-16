@@ -20,6 +20,6 @@ class Curso_banco extends CI_Model {
 
     public function alteraCurso($curso, $id) {
         $this->db->where("id_curso", $id);
-        return $this->db->update("curso", $curso);
+        $this->db->update("curso", $curso);
     }
 }

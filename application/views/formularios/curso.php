@@ -15,6 +15,16 @@ echo form_input(array(
     "class" => "form-control",
     "type" => "number"
 ));
+
+?>
+<label for="professores">Professor</label>
+<select name="professores" id="professores" class="form-control">
+    <?PHP foreach ($professores as $professor) : ?>
+      <option value="<?=$professor["matricula"]?>"><?=$professor["nome"] . " " . $professor["sobrenome"]?> </option>
+    <?PHP endforeach ?>
+</select>
+
+<?PHP
 echo form_label("Descrição", "descricao");
 echo form_textarea(array(
     "name" => "descricao",
