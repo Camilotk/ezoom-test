@@ -48,7 +48,7 @@
                         <span class="glyphicon glyphicon-user"></span> Registrar</a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="<?=site_url('login/formulario_login')?>">
                         <span class="glyphicon glyphicon-log-in"></span> Logar</a>
                 </li>
             </ul>
