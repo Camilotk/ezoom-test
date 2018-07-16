@@ -29,7 +29,7 @@ class Curso extends CI_Controller {
 
     public function cadastra(){
         $curso = array(
-            "nome" => $this->input->post("nome"),
+            "nome_curso" => $this->input->post("nome"),
             "horas" => $this->input->post("horas"),
             "descricao" => $this->input->post("descricao"),
             "id_professor" => $this->input->post("professores")
@@ -43,16 +43,18 @@ class Curso extends CI_Controller {
         $this->load->helper("form");
         $id = $this->input->get("id");
         $this->load->model("curso_banco");
+        $this->load->model("usuario_banco");
+        $professores = $this->usuario_banco->buscaTodosProfessores();
         $curso = $this->curso_banco->encontraCurso($id);
         $this->load->view("headers/cabecalho");
-        $this->load->view("formularios/altera", array("curso" => $curso));
+        $this->load->view("formularios/altera", array("curso" => $curso, "professores" => $professores));
         $this->load->view("headers/rodape");
     }
 
     public function alterar() {
         $this->load->model("curso_banco");
         $curso = array(
-            "nome" => $this->input->post("nome"),
+            "nome_curso" => $this->input->post("nome"),
             "descricao" => $this->input->post("descricao"),
             "horas" => $this->input->post("horas")
         );

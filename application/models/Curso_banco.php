@@ -1,7 +1,13 @@
 <?php
 class Curso_banco extends CI_Model {
     public function buscaTodos(){
-        return $this->db->get("curso")->result_array();
+
+        $this->db->select('*');
+        $this->db->from('curso');
+        $this->db->join('funcionario', 'funcionario.matricula = curso.id_professor');
+        
+        //$this->db->get("curso")->result_array();
+        return $this->db->get()->result_array();
     }
 
     public function insereCurso($curso) {
