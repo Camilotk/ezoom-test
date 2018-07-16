@@ -31,6 +31,7 @@
                     <div class="title">GLSNST</div>
                 </a>
             </div>
+            <?PHP if($this->session->userdata("usuario_logado")) : ?>
             <ul class="nav navbar-nav rounded-0">
                 <li class="active">
                     <a href="#">Home</a>
@@ -44,6 +45,15 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
+                    <a href="<?=site_url('login/logout')?>">
+                        <span class="glyphicon glyphicon-log-in"></span> Deslogar</a>
+                </li>
+            </ul>
+            <?php endif ?>
+
+            <?PHP if(! $this->session->userdata("usuario_logado")) : ?>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
                     <a href="<?=site_url('login/formulario_cadastro')?>">
                         <span class="glyphicon glyphicon-user"></span> Registrar</a>
                 </li>
@@ -52,6 +62,7 @@
                         <span class="glyphicon glyphicon-log-in"></span> Logar</a>
                 </li>
             </ul>
+            <?php endif ?>
         </div>
     </nav>
     <div class="container">

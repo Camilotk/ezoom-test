@@ -45,6 +45,24 @@ class Login extends CI_Controller {
     }
 
     public function logar() {
+        $this->load->model("usuario_banco");
+
+        $email = $this->input->post("email");
+        $senha = $this->input->post("senha");
+
+        $usuario = $this->usuario_banco->buscaUsuario($email, $senha);
+
+        if ($usuario) {
+            $this->session->set_userdata(array("usuario_logado" => $usuario));
+            $this->session->set_flashdata("success", "Logado com sucesso");
+        } else {
+            $this->session->set_flashdata("danger", "Falha no login");
+        }
         $this->load->view("teste");
+    }
+
+    public function logout() {
+        $this->session->unset_userdata("usuario_logado");
+        redirect("/");
     }
 }
