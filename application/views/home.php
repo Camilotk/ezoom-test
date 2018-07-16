@@ -1,4 +1,7 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
+
+
+
 <html>
 
 <head>
@@ -24,15 +27,14 @@
 
 <body>
 
-    <nav class="navbar">
-        <div class="container-fluid">
+    <nav class="navbar rounded-0">
+        <div class="container-fluid rounded-0">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.php">
                     <div class="title">GLSNST</div>
-
                 </a>
             </div>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav rounded-0">
                 <li class="active">
                     <a href="#">Home</a>
                 </li>
@@ -43,7 +45,7 @@
                     <a href="#">Meu Perfil</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right rounded-0">
                 <li>
                     <a href="#">
                         <span class="glyphicon glyphicon-user"></span> Registrar</a>
@@ -55,6 +57,7 @@
             </ul>
         </div>
     </nav>
+
 
     <!-- The video -->
 
