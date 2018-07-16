@@ -7,7 +7,7 @@ Para meu CRUD decidi fazer um  Sistema de Cursos de Inovação baseado no case d
 Então! Antes deste teste eu não sabia absolutamente nada de PHP, precisei aprender fazendo. Mas como não gosto de atirar no escuro fiz dois tutoriais de 12H cada de introdução básica à linguagem e ao framework que estão [neste](https://github.com/Camilotk/primeiro_php) e [neste](https://github.com/Camilotk/codeigniter_estudo) repositório. Ambos também são CRUD's, porém fiz seguindo tutoriais e por tanto são objetos de estudo e não código pessoal.
 
 # PREVIEW
-É possivel utilizar e visualizar o CRUD por [este link](http://localhost/ezoom-test/index.php/) porém o apache da hospedagem pode bloquear alguns redirecionamentos. Caso aconteca algum erro por redirecionamento talvez seja interessante baixar através do GIT CLONE ou da função de compreensão e rodar no localhost.
+Talvez seja interessante baixar através do GIT CLONE ou da função de compreensão e rodar no localhost. Aparentemente os base_url não atualizam as rotas após hospedar e mantem os caminhos locais.
 
 # VERSÕES
  - PHP 7.2
